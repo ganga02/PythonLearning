@@ -11,7 +11,7 @@ high = len(arr)-1
 found = False
 
 while low <= high:
-    mid = (low+high)//2;
+    mid = (low+high)//2
     if(arr[mid]==target):
         print("Element found at position: ",mid+1)
         found = True

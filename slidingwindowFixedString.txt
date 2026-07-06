@@ -1,0 +1,13 @@
+| left | right | Window | Comparison    | best_window |
+| ---- | ----- | ------ | --------------| ----------- |
+| 0    | 2     | abc    | abc > ""      | abc         |
+| 1    | 3     | bcd    | bcd > abc     | bcd         |
+| 2    | 4     | cda    | cda > bcd     | cda         |
+| 3    | 5     | daa    | daa > cda     | daa         |
+| 4    | 6     | aab    | aab > daa ❌ | daa         |
+| 5    | 7     | abb    | abb > daa ❌ | daa         |
+| 6    | 8     | bbc    | bbc > daa ❌ | daa         |
+| 7    | 9     | bcc    | bcc > daa ❌ | daa         |
+| 8    | 10    | cce    | cce > daa ❌ | daa         |
+| 9    | 11    | cee    | cee > daa ❌ | daa         |
+| 10   | 12    | eee    | eee > daa ✅ | eee         |

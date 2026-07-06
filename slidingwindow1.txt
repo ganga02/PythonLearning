@@ -1,0 +1,146 @@
+nums = [1,2,3,4,1,2,5,6,4]
+k = 3
+
+Initial:
+left = 0
+window_size = 0
+max_sum = 0
+best_window = []
+
+----------------------------------------------------
+right = 0
+window_size = 1
+
+if 0-0+1==3 (not satisfied)
+
+----------------------------------------------------
+right = 1
+window_size = 3(1+2)
+
+if 1-0+1 ==3(not satisfied)
+
+----------------------------------------------------
+right = 2, left=0
+window_size = 6(1+2+3)
+
+Window = [1,2,3]
+Sum = 6
+
+if 2-0+1==3
+3==3 (satisfied)
+
+if 6 > 0  ✓
+max_sum = 6
+best_window = nums[0:3]=[1,2,3]
+
+Remove nums[left] = nums[0]=1
+6-1=5
+window_size = 5
+left = 1
+
+----------------------------------------------------
+right = 3, left=1, window_size=5,max_sum=6
+window_size = 5+nums[3] = 5+4 = 9
+
+Window = [2,3,4]
+Sum = 9
+
+if 3-1+1==3: (satisfied)
+if 9 > 6  ✓
+max_sum = 9
+best_window = nums[1:4] = [2,3,4]
+
+Remove nums[left] = nums[1] = 2
+9-2=7
+window_size = 7
+left = 2
+
+----------------------------------------------------
+right = 4, left=2, window_size=7, max_sum =9
+window_size = 7+nums[4] = 7+1 = 8
+
+Window = [3,4,1]
+Sum = 8
+
+if 4-2+1 ==3 (satisfied)
+
+if 8 > 9  ✗
+
+Remove nums[left] = nums[2] = 3
+window_size = 8-3 = 5
+left = 3
+
+----------------------------------------------------
+right = 5, left=3 , window_size =5, max_sum =9
+window_size = 5+nums[5] = 5+2 =  7
+
+Window = [4,1,2]
+Sum = 7
+
+if 5-3+1 ==3(satisfied)
+
+if 7 > 9  ✗
+
+Remove nums[left] = nums[3] = 4
+window_size = 7-4 = 3
+left = 4
+
+----------------------------------------------------
+right = 6 , left =4, window_size = 3, max_sum = 9
+window_size = 3+nums[6] =3+5 = 8
+
+Window = [1,2,5]
+Sum = 8
+
+if 6-4+1 == 3 (satisfied)
+
+if 8 > 9  ✗
+
+Remove nums[left] = nums[4] = 1
+window_size = 8 -1 = 7 
+left = 5
+
+----------------------------------------------------
+right = 7 , left =5, max_sum =9, window_size = 7
+window_size = 7+nums[7] = 7+6 =13
+
+Window = [2,5,6]
+Sum = 13
+
+if 7-5+1==3(satisfied)
+if 13 > 9  ✓
+max_sum = 13
+best_window = [2,5,6]
+
+Remove nums[left] = nums[5] = 2
+window_size = 13-2 = 11
+left = 6
+
+----------------------------------------------------
+right = 8, left=6, max_sum=13, window_size=11
+window_size = 11+nums[8] = 11+4 = 15
+
+Window = [5,6,4]
+Sum = 15
+
+if 8-6+1 ==3 (satisfied)
+
+if 15 > 13  ✓
+max_sum = 15
+best_window = [5,6,4]
+
+Remove nums[left] = nums[6] = 5
+window_size = 15-5 =10
+left = 7
+
+----------------------------------------------------
+
+Final:
+
+best_window = [5,6,4]
+
+Length = 3
+
+Sum = 15
+
+Average = 15 / 3 = 5.0

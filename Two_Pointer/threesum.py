@@ -1,6 +1,5 @@
 class Solution(object):
-    def threeSum(self, nums): #[-4, -2, -2, -1, 0, 1, 1, 2, 2]
-        nums
+    def threeSum(self, nums): 
         nums.sort()
         result = []
 
@@ -39,7 +38,7 @@ class Solution(object):
         
 obj = Solution()
 
-nums = [-4, -2, -2, -1, 0, 1, 1, 2, 2]
+nums = [-1, 0, 1, 2, -1, -4]
 
 result = obj.threeSum(nums)
 
